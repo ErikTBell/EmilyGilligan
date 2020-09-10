@@ -1,0 +1,36 @@
+//Dickenson songs
+
+var songList = [] ;
+var rockSongs = ["Another One Bites the Dust","Piano Man","Sympathy for the Devil","Devil Went Down to Georgia",
+"House of the Rising Sun","California Dreamin","Dancing Days","Ghost Riders in the Sky","Material Girl","Pinball Wizard",
+"Folsom Prison Blues","Hotel California"];
+
+var folkSongs = ["Yellow Rose of Texas","Amazing Grace","Gilligan's Island","America the Beautiful",
+"Supercalifragilistic","I'd Like to Teach the World to Sing","Marine Corps Hymn","Yankee Doodle","Oh Susannah",
+"Greensleeves", "I've Been Working on the Railroad","Beverly Hillbillies"];
+
+var xmasSongs = ["God Rest Ye Merry Gentlemen","Auld Lang Syne","Beverly Hillbillies",
+"Good King Wenceslaus","Frosty the Snowman","O Little Town of Bethlehem"];
+
+songList= songList.concat(rockSongs);
+songList= songList.concat(folkSongs);
+songList= songList.concat(xmasSongs);
+var numSongs = songList.length;
+var numCombos= numSongs * numSongs;
+alert("You have " + numSongs + " songs on the list with " + numCombos + " possible combinations");
+
+var n1 = Math.random();
+n1 = Math.floor(n1 * numSongs);
+var n2 = Math.random();
+n2 = Math.floor(n2 * numSongs);
+alert("Song One is " + songList[n1] + ". and Song Two is " + songList[n2] + ".")
+
+
+
+var xmasSongs = ["'God Rest Ye Merry Gentlemen'|rest_pic","'Auld Lang Syne'|auld_pic","'Beverly Hillbillies'|hill_pic",
+"'Good King Wenceslaus'|king_pic","'Frosty the Snowman'|frosty_pic","'O Little Town of Bethlehem'|beth_pic"];
+var songPic = xmasSongs[1];
+const parseMe = songPic.split('|');
+var songTitle = parseMe[0];
+var picture = parseMe[1];
+alert("Title is " + songTitle + " Picture is " + picture);
